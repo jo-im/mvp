@@ -13,10 +13,12 @@ window.listCalendar = function(month, year) {
   } else {
     days = 31;
   }
+  var id = -1;
 
   for (var i = 1; i <= days; i++) {
+  	id++;
     var currentDay = monthString + '/' + i + '/' + yearString;
-    allDates.push({ date: currentDay, effects: [], breakout: 'false' });
+    allDates.push({ date: currentDay, effects: [], breakout: 'false', id: id });
   }
   return allDates;
 };
