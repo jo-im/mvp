@@ -41,6 +41,7 @@ class App extends React.Component {
   	    <button onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
   	    <button onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
   	    <ListOfDates allDates={this.state.daysOfMonth}/>
+  	    <CauseTable />
   	  </div>
   	)
   }
