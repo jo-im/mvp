@@ -34,8 +34,17 @@ class App extends React.Component {
   }
 
   onBreakOutClick(event) {
-  	debugger;
-  	console.log('Clicking the breakout boolean!!!');
+  	var index = event.currentTarget.id;
+    var clickedDay = this.state.daysOfMonth[index];
+    if (clickedDay.breakout === 'false') {
+      clickedDay.breakout = 'true';
+    } else {
+      clickedDay.breakout = 'false';
+    }
+
+    this.setState({
+      daysOfMonth: this.props.allDates
+    })
   }
 
   render() {
