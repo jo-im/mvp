@@ -47,13 +47,21 @@ class App extends React.Component {
     })
   }
 
+  onSelectDateClick(event) {
+    selectedDay = event.target.parentNode.id;
+  }
+
+  onCauseButtonClick(event) {
+  	console.log('clicked a cause button!');
+  }
+
   render() {
   	return (
   	  <div>
   	    <button onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
   	    <button onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
-  	    <ListOfDates allDates={this.state.daysOfMonth} onBreakOutClick={this.onBreakOutClick.bind(this)} />
-  	    <CauseTable />
+  	    <ListOfDates allDates={this.state.daysOfMonth} onBreakOutClick={this.onBreakOutClick.bind(this)} onSelectDateClick={this.onSelectDateClick.bind(this)} />
+  	    <CauseTable onCauseButtonClick={this.onCauseButtonClick.bind(this)} />
   	  </div>
   	)
   }
