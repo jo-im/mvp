@@ -48,11 +48,19 @@ class App extends React.Component {
   }
 
   onSelectDateClick(event) {
-    selectedDay = event.target.parentNode.id;
+    selectedDate = event.target.parentNode.id;
   }
 
   onCauseButtonClick(event) {
-  	console.log('clicked a cause button!');
+    var buttonText = event.currentTarget.textContent;
+    var daySelected = this.state.daysOfMonth[selectedDate];
+    if (daySelected.effects.indexOf('   ' + buttonText) === -1) {
+      daySelected.effects.push('   ' + buttonText);
+    } 
+
+    this.setState({
+      daysOfMonth: this.props.allDates
+    })
   }
 
   render() {
