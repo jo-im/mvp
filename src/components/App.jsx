@@ -8,7 +8,6 @@ class App extends React.Component {
   }
 
   onPrevButtonClick() {
-  	console.log('PREVBUTTONCLICK HAS BEEN CLICKED');
   	if (currentMonth === 1) {
       currentMonth = 12
       currentYear--;
@@ -22,7 +21,6 @@ class App extends React.Component {
   }
 
   onNextButtonClick() {
-  	console.log('NEXTBUTTONCLICK HAS BEEN CLICKED');
   	if (currentMonth === 12) {
   	  currentMonth = 1;
   	  currentYear++;
@@ -35,12 +33,17 @@ class App extends React.Component {
   	})
   }
 
+  onBreakOutClick(event) {
+  	debugger;
+  	console.log('Clicking the breakout boolean!!!');
+  }
+
   render() {
   	return (
   	  <div>
   	    <button onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
   	    <button onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
-  	    <ListOfDates allDates={this.state.daysOfMonth}/>
+  	    <ListOfDates allDates={this.state.daysOfMonth} onBreakOutClick={this.onBreakOutClick.bind(this)} />
   	    <CauseTable />
   	  </div>
   	)
