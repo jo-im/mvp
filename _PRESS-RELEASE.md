@@ -18,27 +18,38 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  The name of the product is Skin Journal. 
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  A journal that tracks your skin's progress.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Skin Journal is a journal that tracks your skin's progress. There are icons provided that represents possible causes that can contribute to your skin's problem. You can insert those icons 
+  into any day in the journal and by the end of the month it will show the correlation between your skin's condition and the possible causes. 
 
 ## Problem ##
   > Describe the problem your product solves.
+  Sometimes it is difficult to keep track of what causes can be contributing to your skin's problem, but with Skin Journal it will help narrow the causes so you can improve your skin's condition.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Skin Journal solves the problem of trying to figure out the overwhelming possible causes of skin problems by narrowing it down for you. Icons that represent possible causes of your skin problem will be provided where the user can choose the causes and set it to a date. The app will then update and show a correlation between your skin's condition and the possible causes. 
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "With Skin Journal you are finally able to track the possible causes of your skin's problem and take control of your skin's progress"
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  You can get started by clicking on an icon that represents possibe causes that you think is the result of your skin's problems and set it to a date.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "For years I have been trying to figure out what caused my acne. But with Skin Journal, I was able to figure out that it was my peculiar food sensititivy to garlic! Thank you so much Skin Journal! Now I can finally feel I have control of my skin!"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  By using Skin Journal you can finally figure out what are the causes of your skin's problems and take control of your own skin's progress.
+
