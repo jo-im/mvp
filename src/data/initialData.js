@@ -27,5 +27,5 @@ window.listCalendar = function(month, year) {
 var d = new Date();
 window.currentMonth = d.getMonth();
 window.currentYear = Number(d.getFullYear().toString().slice(2));
-
 window.allDates = listCalendar(currentMonth, currentYear);
+window.selectedDate = 0;
