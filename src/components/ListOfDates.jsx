@@ -1,7 +1,7 @@
 var ListOfDates = (props) => (
   <ul>
     {props.allDates.map(day => 
-      <li>{day.breakout} {day.date}</li>
+      <li> <span id={day.id} onClick={props.onBreakOutClick}>{day.breakout}</span> {day.date}</li>
     )}
   </ul>
 );
