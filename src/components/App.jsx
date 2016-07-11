@@ -3,7 +3,8 @@ class App extends React.Component {
   	super(props);
 
   	this.state = {
-  	  daysOfMonth: this.props.allDates
+  	  daysOfMonth: this.props.allDates,
+  	  month: currentMonth
   	};
   }
 
@@ -43,7 +44,7 @@ class App extends React.Component {
     }
 
     this.setState({
-      daysOfMonth: this.props.allDates
+      month: currentMonth
     })
   }
 
@@ -59,7 +60,7 @@ class App extends React.Component {
     } 
 
     this.setState({
-      daysOfMonth: this.props.allDates
+      month: currentMonth
     })
   }
 
