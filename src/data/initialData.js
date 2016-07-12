@@ -1,4 +1,3 @@
-//create a function that takes the current month and the current year
 window.listCalendar = function(month, year) {
   var monthString = month.toString();
   var yearString = year.toString();
@@ -29,3 +28,4 @@ window.currentYear = Number(d.getFullYear().toString().slice(2));
 window.allDates = listCalendar(currentMonth, currentYear);
 window.selectedDate = 0;
 window.buttons = ['Products', 'Lack Of Sleep', 'Poor Diet', 'Stress'];
+
