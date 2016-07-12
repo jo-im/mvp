@@ -1,5 +1,6 @@
 window.createGraphData = function(month, year) {
   //create a results array
+
   var results = [];
 
   var monthString = month.toString();

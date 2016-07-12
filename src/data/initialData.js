@@ -27,5 +27,5 @@ window.currentMonth = d.getMonth();
 window.currentYear = Number(d.getFullYear().toString().slice(2));
 window.allDates = listCalendar(currentMonth, currentYear);
 window.selectedDate = 0;
-window.buttons = ['Products', 'Lack Of Sleep', 'Poor Diet', 'Stress'];
+window.buttons = [{title: 'Products', id: 'first'}, {title: 'Lack Of Sleep', id: 'second'}, {title: 'Poor Diet', id: 'third' }, {title: 'Stress', id: 'fourth'} ];
 

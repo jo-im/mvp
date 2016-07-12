@@ -1,7 +1,7 @@
 var CauseTable = (props) => (
   <div>
     {props.buttons.map(button =>
-      <button onClick={props.onCauseButtonClick} type="button">{button}</button>
+      <button id={button.id} onClick={props.onCauseButtonClick} type="button">{button.title}</button>
     )}
     <form onSubmit={props.onCreateCause}>
       <p>Create another cause</p>

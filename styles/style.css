@@ -1,3 +1,27 @@
 span {
   padding: 5px;
 }
+
+.breakout {
+  color: red;
+}
+
+#first {
+  background-color: green;
+  color: white;
+}
+
+#second {
+  background-color: blue;
+  color: white;
+}
+
+#third {
+  background-color: brown;
+  color: white;
+}
+
+#fourth {
+  background-color: #FFA500;
+  color: white;
+}

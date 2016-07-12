@@ -66,6 +66,16 @@ class App extends React.Component {
     if (daySelected.effects.indexOf('   ' + buttonText) === -1) {
       daySelected.effects.push('   ' + buttonText);
     } 
+    if (buttonText === 'Products') {
+      if (productData[selectedDate].attr === '0') {
+        productData[selectedDate].attr = '0.9';
+      } else {
+        productData[selectedDate].attr = '0';
+      }
+    }
+    
+    console.log('productData is now', productData);
+    createGraph();
 
     this.setState({
       month: currentMonth
@@ -74,8 +84,7 @@ class App extends React.Component {
 
   onCreateCause(event) {
   	var newCause = event.currentTarget[0].form[0].value;
-  	console.log('newCause is', newCause);
-  	buttons.push(newCause);
+  	buttons.push({title: newCause});
   	this.setState({
       buttons: buttons
   	});
