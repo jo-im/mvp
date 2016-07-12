@@ -3,9 +3,8 @@ window.listCalendar = function(month, year) {
   var monthString = month.toString();
   var yearString = year.toString();
   var allDates = [];
-  console.log('month is now', month);
-  console.log('typeof month is', typeof month);
   var days;
+
   if (month === 2) {
     days = 28;
   } else if (month === 4 || month === 6 || month === 9 || month === 11) {
@@ -29,3 +28,4 @@ window.currentMonth = d.getMonth();
 window.currentYear = Number(d.getFullYear().toString().slice(2));
 window.allDates = listCalendar(currentMonth, currentYear);
 window.selectedDate = 0;
+window.buttons = ['Products', 'Lack Of Sleep', 'Poor Diet', 'Stress'];
