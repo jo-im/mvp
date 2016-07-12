@@ -2,6 +2,9 @@ window.createGraph = function() {
 console.log('coming through');
 var data = spData;
 var data2 = productData;
+var data3 = sleepData;
+var data4 = poorDietData;
+var data5 = stressData;
 
 // console.log('data is', data);
 
@@ -46,6 +49,25 @@ var vis = d3.select('#visualization'),
   .attr('stroke', 'green')
   .attr('stroke-width', 2)
   .attr('fill', 'none');
+
+   vis.append('svg:path')
+  .attr('d', skinProblemLine(data3))
+  .attr('stroke', 'blue')
+  .attr('stroke-width', 2)
+  .attr('fill', 'none');
+
+   vis.append('svg:path')
+  .attr('d', skinProblemLine(data4))
+  .attr('stroke', 'brown')
+  .attr('stroke-width', 2)
+  .attr('fill', 'none');
+  
+   vis.append('svg:path')
+  .attr('d', skinProblemLine(data5))
+  .attr('stroke', 'orange')
+  .attr('stroke-width', 2)
+  .attr('fill', 'none');
+
 }
 createGraph();
 

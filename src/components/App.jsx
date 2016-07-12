@@ -16,7 +16,6 @@ class App extends React.Component {
   	} else {
   	  currentMonth--;
   	}
-
   	this.setState({
    	  daysOfMonth: listCalendar(currentMonth, currentYear)
   	})
@@ -29,7 +28,8 @@ class App extends React.Component {
   	} else {
   	  currentMonth++;
   	}
-
+  	firstData();
+    createGraph();
   	this.setState({
   	  daysOfMonth: listCalendar(currentMonth, currentYear)
   	})
@@ -66,11 +66,37 @@ class App extends React.Component {
     if (daySelected.effects.indexOf('   ' + buttonText) === -1) {
       daySelected.effects.push('   ' + buttonText);
     } 
+
     if (buttonText === 'Products') {
       if (productData[selectedDate].attr === '0') {
         productData[selectedDate].attr = '0.9';
       } else {
         productData[selectedDate].attr = '0';
+      }
+    }
+    console.log('buttonText is', buttonText);
+    if (buttonText === 'Lack Of Sleep') {
+       console.log('Entering this if statement for sleep');
+      if (sleepData[selectedDate].attr === '0') {
+        sleepData[selectedDate].attr = '0.8';
+      } else {
+        sleepData[selectedDate].attr = '0';
+      }
+    }
+
+    if (buttonText === 'Poor Diet') {
+      if (poorDietData[selectedDate].attr === '0') {
+        poorDietData[selectedDate].attr = '0.7';
+      } else {
+        poorDietData[selectedDate].attr = '0';
+      }
+    }
+
+    if (buttonText === 'Stress') {
+      if (stressData[selectedDate].attr === '0') {
+        stressData[selectedDate].attr = '0.6';
+      } else {
+        stressData[selectedDate].attr = '0';
       }
     }
     
