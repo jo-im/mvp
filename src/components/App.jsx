@@ -44,6 +44,13 @@ class App extends React.Component {
       clickedDay.breakout = 'false';
     }
 
+    if (spData[index].attr === '0') {
+      spData[index].attr = '1';
+    } else {
+      spData[index].attr = '0';
+    }
+
+    createGraph();
     this.setState({
       month: currentMonth
     })
