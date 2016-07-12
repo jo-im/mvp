@@ -4,7 +4,8 @@ class App extends React.Component {
 
   	this.state = {
   	  daysOfMonth: this.props.allDates,
-  	  month: currentMonth
+  	  month: currentMonth,
+  	  buttons: buttons
   	};
   }
 
@@ -64,13 +65,23 @@ class App extends React.Component {
     })
   }
 
+  onCreateCause(event) {
+  	var newCause = event.currentTarget[0].form[0].value;
+  	console.log('newCause is', newCause);
+  	buttons.push(newCause);
+  	this.setState({
+      buttons: buttons
+  	});
+  	event.preventDefault();
+  }
+
   render() {
   	return (
   	  <div>
   	    <button onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
   	    <button onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
   	    <ListOfDates allDates={this.state.daysOfMonth} onBreakOutClick={this.onBreakOutClick.bind(this)} onSelectDateClick={this.onSelectDateClick.bind(this)} />
-  	    <CauseTable onCauseButtonClick={this.onCauseButtonClick.bind(this)} />
+  	    <CauseTable onCauseButtonClick={this.onCauseButtonClick.bind(this)} onCreateCause={this.onCreateCause.bind(this)} buttons={buttons}/>
   	  </div>
   	)
   }
