@@ -8,16 +8,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost/dates');
+var dateController = require('./server/dates/dateController.js');
 
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 app.use(express.static(__dirname + '/'));
 
-app.post('/addCauseToDate', function(req, res) {
-  console.log('button is posting to addCauseToDate!!!!');
-  console.log('req is', req.body);
-});
+app.post('/addCauseToDate', dateController.addEffect);
+app.get('/all', dateController.allDates);
 
 /////////////////////////////////////////////////////////
 

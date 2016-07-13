@@ -103,7 +103,7 @@ class App extends React.Component {
     console.log('going to call using ajax');
     var data = {};
     data.effect = buttonText;
-    data.breakout = 'false';
+    data.selectedDate = this.state.daysOfMonth[selectedDate];
 
     $.ajax({
       type: 'POST', 
