@@ -99,10 +99,24 @@ class App extends React.Component {
         stressData[selectedDate].attr = '0';
       }
     }
-    
-    console.log('productData is now', productData);
     createGraph();
+    console.log('going to call using ajax');
+    var data = {};
+    data.effect = buttonText;
+    data.breakout = 'false';
 
+    $.ajax({
+      type: 'POST', 
+      url: 'http://localhost:8000/addCauseToDate',
+      data: JSON.stringify(data),
+      contentType: 'application/json', 
+      success: function(data) {
+        console.log('Was able to send the data to server', data);
+      },
+      error: function(data) {
+        console.log('Was unable to send the data', data);
+      }
+    })
     this.setState({
       month: currentMonth
     })
@@ -120,8 +134,9 @@ class App extends React.Component {
   render() {
   	return (
   	  <div>
-  	    <button onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
-  	    <button onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
+        <h2>Skin Journal</h2>
+  	    <button className="monthButton" onClick={this.onPrevButtonClick.bind(this)} type="button">Prev</button>
+  	    <button className="monthButton next" onClick={this.onNextButtonClick.bind(this)} type="button">Next</button>
   	    <ListOfDates allDates={this.state.daysOfMonth} onBreakOutClick={this.onBreakOutClick.bind(this)} onSelectDateClick={this.onSelectDateClick.bind(this)} />
   	    <CauseTable onCauseButtonClick={this.onCauseButtonClick.bind(this)} onCreateCause={this.onCreateCause.bind(this)} buttons={buttons}/>
   	  </div>
